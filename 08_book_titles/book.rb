@@ -1,4 +1,5 @@
 class Book
+	attr_reader :title
 	@book = Book.new
 	def title(book_title)
 		excluded_words = ['the', 'a', 'an', 'and', 'in', 'of']
