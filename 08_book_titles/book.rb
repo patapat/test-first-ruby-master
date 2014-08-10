@@ -1,7 +1,16 @@
 class Book
-	attr_reader :title
-	@book = Book.new
-	def title(book_title)
+
+	def title
+		@book
+	end
+	
+	def title=(title)
+	    @book = titleize(title)
+	end
+	
+	private
+
+	def titleize(book_title)
 		excluded_words = ['the', 'a', 'an', 'and', 'in', 'of']
 		count = -1
 		final_phrase = []

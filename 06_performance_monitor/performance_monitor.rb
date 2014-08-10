@@ -5,7 +5,8 @@ def measure(sleep = 0)
 	if sleep == 0
 		yield
 	else
-		sleep.times {yield}
+		sleep.times { yield }
 	end
-	(Time.now - start) / (sleep == 0 ? 1 : sleep)
+	elapsed_time = (Time.now - start) / (sleep == 0 ? 1 : sleep)
+	elapsed_time
 end

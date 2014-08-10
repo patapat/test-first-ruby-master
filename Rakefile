@@ -9,5 +9,6 @@ RSpec::Core::RakeTask.new do |task|
   lab = Rake.application.original_dir
   task.pattern = "#{lab}/*_spec.rb"
   task.rspec_opts = [ "-I#{lab}", "-I#{lab}/solution", '-f documentation', '-r ./rspec_config', '--no-color']
+  # task.rspec_opts = [ "-I#{lab}", "-I#{lab}/solution", '-r ./rspec_config', '--no-color']
   task.verbose = false
 end
