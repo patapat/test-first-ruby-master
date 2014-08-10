@@ -15,41 +15,24 @@ class RPNCalculator
 		nums[-1] = result
 		@value = nums.last
 	end
+
 	def plus
-		sum = 0
-		@numbers.last(2).each do |num|
-			sum += num
-		end
+		sum = @numbers[-2] + @numbers[-1]
 		merge(@numbers, sum)
 	end
 
 	def minus
-		difference = @numbers[-2]
-		@numbers.last(2).each do |num|
-			if @numbers.last == num 
-				difference -= num
-			end
-		end
+		difference = @numbers[-2] - @numbers[-1]
 		merge(@numbers, difference)
 	end
 
 	def divide
-		quotient = Float(@numbers[-2])
-		@numbers.last(2).each do |num|
-			if @numbers.last == num 
-				quotient /= num
-			end
-		end
+		quotient = Float(@numbers[-2]) / @numbers[-1]
 		merge(@numbers, quotient)
 	end
 
 	def times
-		product = @numbers[-2])
-		@numbers.last(2).each do |num|
-			if @numbers.last == num 
-				product *= num
-			end
-		end
+		product = @numbers[-2] * @numbers.last
 		merge(@numbers, product)
 	end
 end
