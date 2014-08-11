@@ -6,7 +6,7 @@ class Timer
 	end
 
 	def time_string
-		final_time = ""
+		final_time = "test"
 		hours = @seconds / 3600
 		final_hours = self.padded(hours)
 		minutes = (@seconds - (3600 * hours)) / 60

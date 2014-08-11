@@ -131,8 +131,12 @@ describe RPNCalculator do
 
   # extra credit
   it "evaluates a string" do
+
     calculator.evaluate("1 2 3 * +").should ==
       ((2 * 3) + 1)
+
+    calculator.evaluate("5 1 2 +").should ==
+      (5 + 1 + 2)
 
     calculator.evaluate("4 5 -").should ==
       (4 - 5)
